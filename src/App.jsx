@@ -10,16 +10,26 @@ import FooterSection from './Components/FooterSection'
 import CategoryPage from './Pages/CategoryPage'
 import ProductPage from './Pages/ProductPage'
 import CategoriesSection from './Components/CategoriesSection'
+import UserCartInfo  from "./Pages/UserCartInfo";
 
 
 function App() {
 
-const [user, setUser]= useState(false)
+const [user, setUser]= useState(true)
+
+// const [cartItems, setCartItems] = useState([]);
+
+// const addToCart = (product) => {
+//   setCartItems([...cartItems, product]);
+// };
+
+
 
   return (
   <>
 
   <NavigationBar/>
+
 
   {
     user 
@@ -30,6 +40,7 @@ const [user, setUser]= useState(false)
       <Route path="/products" element={<Products />} />
       <Route path="/products/:productID" element={<ProductPage />} />
       <Route path="/products/category/:categoryName" element={<CategoryPage />} />
+      <Route path="/usercartinfo" element={<UserCartInfo/>}/>
       <Route path="*" element={<Page404/>} />
       </Routes>) 
     : 
