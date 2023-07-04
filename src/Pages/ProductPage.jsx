@@ -5,8 +5,8 @@ import ReactStars from 'react-stars'
 import Swal from 'sweetalert2'
 import ImageSection from '../Components/ImageSection'
 import ShopCart from '../MyCart/ShopCart'
-// import Loader from '../Components/Loader'
 import { ScaleLoader } from 'react-spinners'
+// import {GlobalContext} from '../Context/CartContext'
 
 
 
@@ -18,6 +18,7 @@ export default function ProductPage() {
   const [ratingstar, setratingStar] = useState(0)
   const [productQuantity, setproductQuantity] = useState(1)
   const [showLoader, setshowLoader] = useState(true)
+  // const {state , dispatch } = useContext(GlobalContext)
 
   const ratingChanged = (newRating) => {
     setratingStar(newRating)
@@ -42,6 +43,19 @@ export default function ProductPage() {
     setratingStar(0)
   }
 
+  // const addToCart = (e) => {
+  //   e.preventDefault();
+  //   const payLoad = {
+  //     ...product,
+  //     productQuantity,
+  //     totalPrice: product.price * productQuantity
+  //   }
+  //   console.log(payLoad)
+
+  //   dispatch({
+  //     type :"USER_CART",
+  //     payload : payLoad
+  //   })
 
   const addToCart = () => {
     const payLoad = {
@@ -74,7 +88,7 @@ export default function ProductPage() {
 
   return (
     <>
-      {/* {product.length > 0 ? (  */}
+  
 
 
       {

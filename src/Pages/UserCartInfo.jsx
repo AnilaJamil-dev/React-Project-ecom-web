@@ -1,12 +1,12 @@
 import React from 'react'
 import {FaCartArrowDown} from 'react-icons/fa'
 import { Button, Card, Container, Row, Col } from 'react-bootstrap';
-import {addToCart} from './ProductPage'
+// import {addToCart} from './ProductPage'
+import { GlobalContext } from '../Context/CartContext';
 
+export default function UserCartInfo() {
 
-export default function UserCartInfo({ addToCart }) {
-
-
+  const {state,dispatch} =useContext(GlobalContext)
 
 
   return (
@@ -21,7 +21,8 @@ export default function UserCartInfo({ addToCart }) {
             <p className='text-secondary'>You have total <span>--</span>item/items in your cart.</p>
         </div>
 
-
+        {state.user?.product}
+        
 <Card  className="mb-2">
         <Card.Body>
           <Container>

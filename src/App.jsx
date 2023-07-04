@@ -16,6 +16,11 @@ import UserCartInfo  from "./Pages/UserCartInfo";
 function App() {
 
 const [user, setUser]= useState(true)
+// const [cart, setCart]= useState([])
+
+
+
+
 
 // const [cartItems, setCartItems] = useState([]);
 

@@ -1,7 +1,7 @@
 export const reducer = (state,action) => {
     switch (action.type) {
         case "LOGIN_USER":
-        return state    
+        return {...state,user : action.payLoad}
     
         default:
             return state;
